@@ -1,0 +1,33 @@
+.information {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .info-item {
+    flex: 0 1 30%; /* Each item takes up to 30% of the available space */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+  
+  .info-item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .info-item p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .info-item {
+      flex-basis: 100%; /* Each item takes full width on smaller screens */
+    }
+  }
+  

@@ -1,0 +1,92 @@
+.banner {
+  width: 1200px;
+  display: flex;
+  background-color: #1a52cb;
+  color: #fff;
+}
+
+.left-section,
+.right-section {
+  padding: 20px;
+}
+
+.left-section {
+  flex: 1;
+}
+
+.left-section img {
+  max-width: 20%;
+}
+
+.right-section {
+  display: flex;
+  flex: 3;
+}
+
+.sub-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Ensures that the vertical line is positioned correctly */
+}
+
+.sub-section::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px; /* Width of the vertical line */
+  background-color: #fff; /* Color of the vertical line */
+}
+
+/* Apply a left border to the first sub-section */
+.sub-section:first-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px; /* Width of the vertical line */
+  background-color: #fff; /* Color of the vertical line */
+}
+
+.sub-section img {
+  max-width: 15%;
+  background-color: yellow;
+  border-radius: 50%;
+  padding: 5%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.sub-section h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+  }
+
+  .left-section,
+  .right-section {
+    flex: none;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .sub-section::after,
+  .sub-section:first-child::before {
+    content: none; /* Remove the vertical lines in responsive layout */
+  }
+
+  .sub-section {
+    margin: 10px 0;
+  }
+}

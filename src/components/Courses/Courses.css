@@ -1,0 +1,41 @@
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .course-card {
+    width: 25%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .course-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .course-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .course-card p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  h2 {
+    text-align: center; /* Centers the text */
+    color: darkblue; /* Changes the text color to dark blue */
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .course-card {
+      width: calc(50% - 20px); /* Adjusted width to accommodate margin */
+    }
+  }
+  
